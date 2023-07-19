@@ -5,6 +5,6 @@ class Vferw(models.Model):
     bddh12 = models.BigIntegerField(blank=True,)
 class Cswd(models.Model):
     'Generated Model'
-    dsfsf = models.BigIntegerField()
-    xvxbxb = models.BigIntegerField()
-    bxbx = models.BigIntegerField()
+    dsfsf89 = models.BigIntegerField(blank=True,null=True,)
+    xvxbxb = models.BigIntegerField(blank=True,)
+    bxbx = models.BigIntegerField(blank=True,)

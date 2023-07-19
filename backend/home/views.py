@@ -1,4 +1,4 @@
-from .models import Vferw
+from .models import Vferw, Cswd
 from django.views.generic import CreateView, UpdateView, DetailView, ListView
 from django.shortcuts import render
 
