@@ -6,6 +6,24 @@ const zlpudevAPI = axios.create({
 function api_docs_schema_retrieve(payload) {
   return zlpudevAPI.get(`/api-docs/schema/`, { params: { lang: payload.lang } })
 }
+function api_v1_cswd_list(payload) {
+  return zlpudevAPI.get(`/api/v1/cswd/`)
+}
+function api_v1_cswd_create(payload) {
+  return zlpudevAPI.post(`/api/v1/cswd/`, payload)
+}
+function api_v1_cswd_retrieve(payload) {
+  return zlpudevAPI.get(`/api/v1/cswd/${payload.id}/`)
+}
+function api_v1_cswd_update(payload) {
+  return zlpudevAPI.put(`/api/v1/cswd/${payload.id}/`, payload)
+}
+function api_v1_cswd_partial_update(payload) {
+  return zlpudevAPI.patch(`/api/v1/cswd/${payload.id}/`, payload)
+}
+function api_v1_cswd_destroy(payload) {
+  return zlpudevAPI.delete(`/api/v1/cswd/${payload.id}/`)
+}
 function api_v1_login_create(payload) {
   return zlpudevAPI.post(`/api/v1/login/`, payload)
 }
@@ -65,6 +83,12 @@ function rest_auth_user_partial_update(payload) {
 }
 export const apiService = {
   api_docs_schema_retrieve,
+  api_v1_cswd_list,
+  api_v1_cswd_create,
+  api_v1_cswd_retrieve,
+  api_v1_cswd_update,
+  api_v1_cswd_partial_update,
+  api_v1_cswd_destroy,
   api_v1_login_create,
   api_v1_signup_create,
   api_v1_vferw_list,
