@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from home.models import Vferw
-from .serializers import VferwSerializer
+from home.models import Cswd,Vferw
+from .serializers import CswdSerializer,VferwSerializer
 from rest_framework import authentication
 from rest_framework.authtoken.serializers import AuthTokenSerializer
 from rest_framework.viewsets import ModelViewSet, ViewSet
@@ -37,3 +37,8 @@ class VferwViewSet(viewsets.ModelViewSet):
     serializer_class = VferwSerializer
     authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
     queryset = Vferw.objects.all()
+
+class CswdViewSet(viewsets.ModelViewSet):
+    serializer_class = CswdSerializer
+    authentication_classes = (authentication.SessionAuthentication, authentication.TokenAuthentication)
+    queryset = Cswd.objects.all()

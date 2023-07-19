@@ -1,5 +1,5 @@
 from django.contrib.auth import get_user_model
-from home.models import Vferw
+from home.models import Cswd,Vferw
 from django.http import HttpRequest
 from django.utils.translation import ugettext_lazy as _
 from allauth.account import app_settings as allauth_settings
@@ -80,4 +80,10 @@ class VferwSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Vferw
+        fields = "__all__"
+
+class CswdSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Cswd
         fields = "__all__"
